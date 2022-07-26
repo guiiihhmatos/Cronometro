@@ -1,0 +1,31 @@
+
+<section>
+
+  <div class="card">
+    <h2 class="card__title">Cronômetro</h2>
+
+    <div class="card__cronometro">
+      <div class="card__cronometro--h2">
+        <h2> {{ minutos }} Mín</h2>
+      </div>
+
+      <div class="card__cronometro--h2">
+        <h2> {{ segundos }} Seg</h2>
+      </div>
+
+      <div class="card__cronometro--h2">
+        <h2> {{ milisegundos }} Ms</h2>
+      </div>
+
+
+    </div><!--card__cronometro-->
+
+    <div class="card__button">
+      <button (click)="onIniciar()" *ngIf="verificacaoIniciar" style="background-color: #90ee90;">Iniciar</button>
+      <button (click)="onStop(intervalo)" style="background-color: red;">Parar</button>
+      <button (click)="onZerar()" *ngIf="verificacao">Zerar</button>
+    </div>
+
+  </div><!--card-->
+
+</section>
